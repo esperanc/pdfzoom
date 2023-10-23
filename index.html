@@ -1,0 +1,14 @@
+<div id="observablehq-viewof-inputZipFile-35b744e1"></div>
+<div id="observablehq-presenter-35b744e1"></div>
+<p>Credit: <a href="https://observablehq.com/@the-heitortomaz/pdf-zoom-viewer">PDF Zoom Viewer by Heitor Tomaz</a></p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@the-heitortomaz/pdf-zoom-viewer.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof inputZipFile") return new Inspector(document.querySelector("#observablehq-viewof-inputZipFile-35b744e1"));
+  if (name === "presenter") return new Inspector(document.querySelector("#observablehq-presenter-35b744e1"));
+  return ["loadZipFile"].includes(name);
+});
+</script>
